@@ -1,3 +1,8 @@
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:waste_inspector_ai/core/constant/app_images.dart';
+
+import 'models/onBoardingModel.dart';
+
 class Static {
 static  String prompt ="""حلل هذه المادة! 📸
 أعطني صورة واضحة للمادة وأجب عن الأسئلة التالية:
@@ -27,4 +32,13 @@ static String reponseOne = """{
   "Reuse_Suggestions": "يمكن إعادة استخدام البطاريات القديمة بعدة طرق، بما في ذلك:\n\n* **استخدامها في الأجهزة ذات الاستهلاك المنخفض للطاقة:** يمكن استخدام البطاريات القديمة في الأجهزة ذات الاستهلاك المنخفض للطاقة، مثل الساعات والآلات الحاسبة.\n* **صنع الحرف اليدوية:** يمكن استخدام البطاريات القديمة لصنع الحرف اليدوية، مثل المجوهرات والديكورات المنزلية.\n* **إعادة تدويرها:** يمكن إعادة تدوير البطاريات وتحويلها إلى منتجات جديدة.\n\nيمكن العثور على معلومات حول إعادة تدوير البطاريات على مواقع الويب الخاصة بجمعيات إعادة التدوير المحلية.",
   "Information": "يمكن إعادة تدوير البطاريات في معظم مراكز إعادة التدوير. ابحث عن مركز إعادة تدوير محلي يقبل البطاريات."
 }""" ;
+
+static SharedPreferences? sharedPreferences ;
+
+static List<OnBoardingModel> onBoardingList =[
+  OnBoardingModel(title: "Waste inspector", image: AppImages.logo, body: "Reliable And Fast Delivery. We\n Deliver your product the fastest\n way possible."),
+  OnBoardingModel(title: "Waste inspector", image: AppImages.logo, body: "Reliable And Fast Delivery. We\n Deliver your product the fastest\n way possible."),
+  OnBoardingModel(title: "Waste inspector", image: AppImages.logo, body: "Reliable And Fast Delivery. We\n Deliver your product the fastest\n way possible."),
+  OnBoardingModel(title: "Waste inspector", image: AppImages.logo, body: "Reliable And Fast Delivery. We\n Deliver your product the fastest\n way possible."),
+];
 }

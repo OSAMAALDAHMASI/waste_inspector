@@ -8,9 +8,9 @@ import 'package:waste_inspector_ai/view/widgets/home_page/back_ground_image.dart
 import 'package:waste_inspector_ai/view/widgets/home_page/search_bouttom.dart';
 import 'package:waste_inspector_ai/view/widgets/home_page/upload_image_de.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends GetView<HomePageCoImp> {
   HomePage({super.key});
-  final HomePageCoImp homePageCoImp = Get.put(HomePageCoImp());
+  // final HomePageCoImp homePageCoImp = Get.put(HomePageCoImp());
   @override
   Widget build(BuildContext context) {
     return Scaffold(

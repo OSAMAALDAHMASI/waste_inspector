@@ -11,6 +11,7 @@ class SearchBouttom extends GetView<HomePageCoImp> {
 
   @override
   Widget build(BuildContext context) {
+    // HomePageCoImp controller =Get.put(HomePageCoImp());
     return DraggableScrollableSheet(
       initialChildSize: 0.1,
       minChildSize: 0.1,
@@ -137,7 +138,7 @@ class PartOneLoding extends StatelessWidget {
   }
 }
 
-class PartTowShowResponse extends GetView<HomePageCoImp> {
+class PartTowShowResponse extends StatelessWidget {
   const PartTowShowResponse({super.key});
 
   @override

@@ -4,6 +4,8 @@ import 'package:waste_inspector_ai/theme/app_theme.dart';
 import 'package:waste_inspector_ai/view/screens/home_page.dart';
 import 'package:waste_inspector_ai/view/screens/splash_screen.dart';
 
+import 'bindings/intialbinding.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: appTheme() ,
+      initialBinding: InitialBinding(),
       initialRoute: '/',
       getPages: [GetPage(name: '/', page: () => const SplashScreen())],
     );
