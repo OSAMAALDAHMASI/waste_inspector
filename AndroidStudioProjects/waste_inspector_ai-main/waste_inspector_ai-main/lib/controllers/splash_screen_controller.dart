@@ -22,7 +22,7 @@ class SplashScreenControllerImp extends SplashScreenController{
   @override
   goToHome()async {
     Future.delayed( const Duration(seconds:2)).then((value) async {
-      if(Static.sharedPreferences?.getString("step")=="2"){
+      if(Static.sharedPreferences?.getString("step")=="1"){
         Get.offAll( HomePage());
       }
       else{

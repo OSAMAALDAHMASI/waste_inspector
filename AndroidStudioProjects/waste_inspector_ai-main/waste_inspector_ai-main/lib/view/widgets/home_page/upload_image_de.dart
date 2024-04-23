@@ -20,11 +20,13 @@ class UploadImageDe extends StatelessWidget {
                       myFile!,
                     ),
                     fit: BoxFit.cover)
-                : null,
+                : DecorationImage(scale: 2,
+                image: AssetImage("assets/images/4.png"),
+                ),
             borderRadius: BorderRadius.circular(20.0),
-            border: Border.all(style: BorderStyle.solid)),
+            border: Border.all(style: BorderStyle.solid,color: Colors.green)),
         child: Center(
-          child: Text(myFile != null ? "" : AppStrings.uploadImage),
+          child: Text(""),
         ),
       ),
     );

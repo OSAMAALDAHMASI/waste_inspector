@@ -19,24 +19,27 @@ class OnBoarding extends StatelessWidget {
         // backgroundColor: AppColor.white,
         body: SafeArea(
 
-          child: Column(
-            children: [
-             
-              const Expanded(
-                flex: 6,
-                child: CustomSliderOnBoarding(),
-              ),
-              const Expanded(
-                  flex: 2,
-                  child: Column(
-                    children: [
-                      Spacer(),
-                      CustomDotControllerOnBoarding(),
-                      Spacer(),
-                      CustomButtonOnBoarding()
-                    ],
-                  ))
-            ],
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 18.0),
+            child: Column(
+              children: [
+               
+                const Expanded(
+                  flex: 6,
+                  child: CustomSliderOnBoarding(),
+                ),
+                const Expanded(
+                    flex: 2,
+                    child: Column(
+                      children: [
+                        Spacer(flex: 2,),
+                        CustomDotControllerOnBoarding(),
+                        Spacer(),
+                        CustomButtonOnBoarding()
+                      ],
+                    ))
+              ],
+            ),
           ),
         ));
   }

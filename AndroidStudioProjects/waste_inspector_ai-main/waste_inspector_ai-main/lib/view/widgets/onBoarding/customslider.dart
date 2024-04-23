@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:waste_inspector_ai/core/constant/app_colors.dart';
 
 import '../../../controllers/onBoarding_controller.dart';
 import '../../../data/static.dart';
@@ -22,22 +23,20 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
       itemBuilder: (BuildContext context, int i) {
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset("${Static.onBoardingList[i].image}",height: 350,width: 250,),
-            const Spacer(
-              flex: 1,
-            ),
+
             FittedBox(
               child: Text(
-                "${Static.onBoardingList[i].title}",
-                style: TextStyle(color: Colors.black,fontSize:screenWidth*0.08,fontWeight: FontWeight.bold ),
+                "${Static.onBoardingList[i].title }",textAlign: TextAlign.center,
+                style: TextStyle(color: AppColors.premary,fontSize:screenWidth*0.08,fontWeight: FontWeight.bold ),
               ),
             ),
-            const Spacer(flex: 1),
             FittedBox(
               child: Text(
                 "${Static.onBoardingList[i].body}",
-                style:  TextStyle(color: Colors.black,fontSize:screenWidth*0.0470,),
+                style:  TextStyle(color: Color(0xff12220A),fontSize:screenWidth*0.0470,),
                 textAlign: TextAlign.center,
               ),
             ),

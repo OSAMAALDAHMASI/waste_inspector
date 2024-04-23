@@ -172,7 +172,7 @@ class PartTowShowResponse extends StatelessWidget {
                               alignment: AlignmentDirectional.centerStart,
                               child: Text(
                                 co.titles[index].title,
-                                style: Theme.of(context).textTheme.titleSmall,
+                                style: Theme.of(context).textTheme.titleSmall?.copyWith(color:AppColors.darkGreen ),
                               ));
                         },
                         body: Container(

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:waste_inspector_ai/controllers/home_page_co.dart';
@@ -16,6 +17,7 @@ class HomePage extends GetView<HomePageCoImp> {
     return Scaffold(
         backgroundColor: AppColors.white,
         appBar: AppBar(
+
           title: const Text("Waste Inspector Ai"),
           leading: GetBuilder<HomePageCoImp>(
             builder: (co) {
@@ -27,7 +29,7 @@ class HomePage extends GetView<HomePageCoImp> {
                   duration: const Duration(milliseconds: 700));
             },
           ),
-          backgroundColor: AppColors.white,
+          backgroundColor: AppColors.premary,
           centerTitle: true,
         ),
         body: GetBuilder<HomePageCoImp>(builder: (co) {
@@ -67,9 +69,13 @@ class HomePartOne extends StatelessWidget {
             onTap: () => bouttomSheetCu(() => co.onTapCamera(), () => co.onTapGellery()),
           ),
           const SizedBox(height: 16.0),
-          ElevatedButton(onPressed: () {
+          FittedBox(child: Text("Upload Image then Click Search",style: TextStyle(color: AppColors.darkGreen))),
+          const SizedBox(height: 16.0),
+          ElevatedButton(
+            style: ButtonStyle(padding:MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 55.0)),backgroundColor: MaterialStateProperty.all(AppColors.premary)),
+              onPressed: () {
             co.myFile != null ? co.ontapSearch(co.myFile! , Static.prompt) : null ;
-          } , child: const Text("Search")),
+          } , child:  Text(" Search",style: TextStyle(color: AppColors.white),)),
         ],
       ),
     );
