@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:waste_inspector_ai/core/constant/app_strings.dart';
 
 class UploadImageDe extends StatelessWidget {
   const UploadImageDe({super.key, this.onTap, this.myFile});

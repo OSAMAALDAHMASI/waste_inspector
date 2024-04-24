@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:waste_inspector_ai/theme/app_theme.dart';
-import 'package:waste_inspector_ai/view/screens/home_page.dart';
 import 'package:waste_inspector_ai/view/screens/splash_screen.dart';
 
 import 'bindings/intialbinding.dart';

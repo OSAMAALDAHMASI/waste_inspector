@@ -201,7 +201,6 @@ class _ChatWidgetState extends State<ChatWidget> {
     });
     try {
       ByteData catBytes = await rootBundle.load(AppImages.power);
-      ByteData sconeBytes = await rootBundle.load('assets/images/scones.jpg');
       final content = [
         Content.multi([
           TextPart(message),
@@ -218,6 +217,7 @@ class _ChatWidgetState extends State<ChatWidget> {
       Map map = jsonDecode(text!);
       print(map['Reuse_Suggestions']);
 
+      // ignore: unnecessary_null_comparison
       if (text == null) {
         _showError('No response from API.');
         return;
