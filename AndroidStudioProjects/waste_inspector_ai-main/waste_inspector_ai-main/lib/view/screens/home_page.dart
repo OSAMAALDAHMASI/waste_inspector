@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:waste_inspector_ai/controllers/home_page_co.dart';
@@ -10,14 +9,13 @@ import 'package:waste_inspector_ai/view/widgets/home_page/search_bouttom.dart';
 import 'package:waste_inspector_ai/view/widgets/home_page/upload_image_de.dart';
 
 class HomePage extends GetView<HomePageCoImp> {
-  HomePage({super.key});
+  const HomePage({super.key});
   // final HomePageCoImp homePageCoImp = Get.put(HomePageCoImp());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: AppColors.white,
         appBar: AppBar(
-
           title: const Text("Waste Inspector Ai"),
           leading: GetBuilder<HomePageCoImp>(
             builder: (co) {
@@ -61,22 +59,31 @@ class HomePartOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(65.0),
-      child: Column(
-        children: [
-          UploadImageDe(
-            myFile: co.myFile,
-            onTap: () => bouttomSheetCu(() => co.onTapCamera(), () => co.onTapGellery()),
-          ),
-          const SizedBox(height: 16.0),
-          FittedBox(child: Text("Upload Image then Click Search",style: TextStyle(color: AppColors.darkGreen))),
-          const SizedBox(height: 16.0),
-          ElevatedButton(
-            style: ButtonStyle(padding:MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 55.0)),backgroundColor: MaterialStateProperty.all(AppColors.premary)),
-              onPressed: () {
-            co.myFile != null ? co.ontapSearch(co.myFile! , Static.prompt) : null ;
-          } , child:  Text(" Search",style: TextStyle(color: AppColors.white),)),
-        ],
+      margin: const EdgeInsets.all(60.0),
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            UploadImageDe(
+              myFile: co.myFile,
+              onTap: () => bouttomSheetCu(() => co.onTapCamera(), () => co.onTapGellery()),
+            ),
+            const SizedBox(height: 16.0),
+            FittedBox(child: Text("Upload Image then Click Search", style: TextStyle(color: AppColors.darkGreen))),
+            const SizedBox(height: 16.0),
+            ElevatedButton(
+                style: ButtonStyle(
+                    padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 55.0)),
+                    backgroundColor: MaterialStateProperty.all(AppColors.premary)),
+                onPressed: () {
+                  co.myFile != null ? co.ontapSearch(co.myFile!, Static.prompt) : null;
+                },
+                child: Text(
+                  " Search",
+                  style: TextStyle(color: AppColors.white),
+                )),
+          ],
+        ),
       ),
     );
   }

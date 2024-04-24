@@ -1,4 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+      <queries>
+    <intent>
+      <action android:name="android.support.customtabs.action.CustomTabsService" />
+    </intent>
+    <!--#docregion android-queries-->
+  </queries>
     <application
         android:label="waste_inspector_ai"
         android:name="${applicationName}"

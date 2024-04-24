@@ -6,4 +6,5 @@ class AppImages {
   static String one  =  '$imageRoute/1.png' ;
   static String two  =  '$imageRoute/2.png' ;
   static String three  =  '$imageRoute/3.png' ;
+  static String google  =  '$imageRoute/google.png' ;
 }
